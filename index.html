@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tip Calculator Frontend Mentor Challenge by Mahmoud Kamal." />
+    <title>Tip Calculator - Frontend Mentor</title>
+    <link rel="shortcut icon" href="./img/favicon.svg" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="./js/main.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <div class="calculator">
+        <h1 class="calculator__title">spli<span>tter</span></h1>
+
+        <form class="calculator__form">
+          <fieldset>
+            <div class="calculator__form__field">
+              <label for="bill">bill</label>
+              <input type="number" name="bill" id="bill" min="1" step="any" placeholder="0" />
+              <span>can't be zero</span>
+            </div>
+
+            <div class="calculator__form__radio">
+              <label for="tip">select tip %</label>
+
+              <ul>
+                <li>
+                  <label for="tip1"><input type="radio" name="tip" id="tip1" value="5" /><span>5%</span></label>
+                </li>
+                <li>
+                  <label for="tip2"><input type="radio" name="tip" id="tip2" value="10" /><span>10%</span></label>
+                </li>
+                <li>
+                  <label for="tip3"><input type="radio" name="tip" id="tip3" value="15" /><span>15%</span></label>
+                </li>
+                <li>
+                  <label for="tip4"> <input type="radio" name="tip" id="tip4" value="25" /><span>25%</span> </label>
+                </li>
+                <li>
+                  <label for="tip5"><input type="radio" name="tip" id="tip5" value="50" /><span>50%</span></label>
+                </li>
+                <li>
+                  <label for="cutom">
+                    <input type="number" min="1" name="cutom" step="1" placeholder="Custom" data-custom-tip />
+                    <span>can't be zero</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+
+            <div class="calculator__form__field">
+              <label for="people">number of people</label>
+              <input type="number" name="people" id="people" min="1" step="1" placeholder="0" />
+              <span>can't be zero</span>
+            </div>
+          </fieldset>
+
+          <div class="calculator__form__result">
+            <div>
+              <h2>tip amount <span>/ person</span></h2>
+              <span data-tip>0.00</span>
+            </div>
+
+            <div>
+              <h2>total <span>/ person</span></h2>
+              <span data-total>0.00</span>
+            </div>
+
+            <input type="reset" data-reset />
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
